@@ -32,3 +32,7 @@ data "template_file" "vault_task_def" {
     aws_region = var.aws_region
   }
 }
+
+output "foad"{
+  value = data.template_file.vault_task_def.rendered
+}

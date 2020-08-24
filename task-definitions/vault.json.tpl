@@ -7,8 +7,8 @@
     "essential": true,
     "portMappings": [
       {
-        "containerPort": 8200,
-        "hostPort": 8200
+        "containerPort": 8300,
+        "hostPort": 8300
       }
     ],
     "environment": [
