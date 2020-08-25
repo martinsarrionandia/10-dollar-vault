@@ -12,7 +12,10 @@ Mostly cut and paste from https://github.com/hashicorp/vault-guides, combined wi
 
 The idea is to run a vault server as cheaply as possibly with the ability to implement near instant on-demand functionailty, only paying for vault when you need it. Switch it on and off at the start of your deployment etc etc.
 
-...Does not contain Burboun.
+If you forget to turn it off it should only cost $10 a month!
+
+...Does not contain Bourbon.
+
 
 ---
 
