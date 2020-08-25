@@ -1,6 +1,6 @@
 # $10 Vault
 
-This is a hasicorp vault setup that runs on Fargate, is backed by EFS and is unsealed using KMS.
+This is a hashicorp vault setup that runs on Fargate, is backed by EFS and is unsealed using KMS.
 
 "Did you just order a $10 Vault?"
 
