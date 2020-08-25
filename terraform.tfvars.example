@@ -1,5 +1,0 @@
-#------------------------------------------------
-# Modify the region to use different AWS region
-#------------------------------------------------
-aws_region = "eu-west-2"
-aws_zone = "eu-west-2a"
