@@ -6,7 +6,13 @@ This is a hasicorp vault setup that runs on Fargate, is backed by EFS and is uns
 
 "Mmmm Hmmm"
 
-Other crap cut and paste from hasicorp...
+"Goddamm that's a pretty freakin good vault. I don't know if it's worth 10 dollars but it's prerty freakin good". (Edited for ITV1)
+
+Mostly cut and paste from https://github.com/hashicorp/vault-guides, combined with random articles on server fault and fed into an AI system that simulates an infinite number of monkeys.
+
+The idea is to run a vault server as cheaply as possibly with the ability to implement near instant on-demand functionailty, only paying for vault when you need it. Switch it on and off at the start of your deployment etc etc.
+
+...Does not contain Burboun.
 
 ---
 
@@ -26,36 +32,6 @@ $ terraform init
 
 $ terraform plan
 
-# Output provides the SSH instruction
+# Output provides the vault address
 $ terraform apply
-
-# SSH into the EC2 machine
-$ ssh ubuntu@<IP_ADDRESS> -i private.key
-
-#----------------------------------
-# Once inside the EC2 instance...
-$ export VAULT_ADDR=http://127.0.0.1:8200
-
-$ vault status
-
-# Initialize Vault
-$ vault operator init -key-shares=1 -key-threshold=1
-
-# Restart the Vault server
-$ sudo systemctl restart vault
-
-# Check to verify that the Vault is auto-unsealed
-$ vault status
-
-$ vault login <INITIAL_ROOT_TOKEN>
-
-# Explorer the Vault configuration file
-$ cat /etc/vault.d/vault.hcl
-
-$ exit
-#----------------------------------
-
-# Clean up...
-$ terraform destroy -force
-$ rm -rf .terraform terraform.tfstate* private.key
 ```
